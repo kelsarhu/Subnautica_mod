@@ -1,0 +1,10 @@
+{
+  "Id": "Water Machine No More Flashy",
+  "DisplayName": "Water Machine No More Flashy",
+  "Author": "RoseComyn",
+  "Version": "1.0.1",
+  "Requires": [ ],
+  "Enable": true,
+  "AssemblyName": "Water Machine No More Flashy.dll",
+  "EntryMethod": "WaterMachineNoMoreFlashy.MainPatcher.Patch"
+}
