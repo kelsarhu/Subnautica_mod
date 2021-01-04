@@ -1,0 +1,10 @@
+{
+  "Id": "Save My Eyes! Flares edition",
+  "DisplayName": "Save My Eyes! Flares edition",
+  "Author": "RoseComyn",
+  "Version": "1.0.0",
+  "Requires": [ ],
+  "Enable": true,
+  "AssemblyName": "Save_My_Eyes__Flares_edition.dll",
+  "EntryMethod": "Save_My_Eyes__Flares_edition.Flares_qmod.Patch"
+}
