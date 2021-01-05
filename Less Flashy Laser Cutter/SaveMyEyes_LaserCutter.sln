@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Less Flashy Laser Cutter", "Less Flashy Laser Cutter\Less Flashy Laser Cutter.csproj", "{0D63B7A4-1514-40A8-9F3C-A5A7D7D04D43}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveMyEyes_LaserCutter", "Less Flashy Laser Cutter\SaveMyEyes_LaserCutter.csproj", "{0D63B7A4-1514-40A8-9F3C-A5A7D7D04D43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
