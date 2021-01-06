@@ -18,14 +18,17 @@ namespace lflc
 			{
 				if (__instance.cutObject.GetComponent<MeshRenderer>().material != null)
 				{
-					float num = 1f;
+					float num = __instance.cutObject.GetComponent<MeshRenderer>().material.GetFloat("_GlowStrength");
 					if (__instance.cutObject.GetComponent<MeshRenderer>().material.GetFloat("_GlowStrength") > 0f)
 					{
-						num = Mathf.MoveTowards(num, 0f, Time.deltaTime / 10f); // 10 second exponential dim
+
+						float num2 = num / 10;
+						num = Mathf.MoveTowards(num2, 0f, Time.deltaTime / 10f); // 10 second exponential dim
+						
 						__instance.cutObject.GetComponent<MeshRenderer>().material.SetFloat
-							(ShaderPropertyID._GlowStrength, num);
+							(ShaderPropertyID._GlowStrength, num2);
 						__instance.cutObject.GetComponent<MeshRenderer>().material.SetFloat
-							(ShaderPropertyID._GlowStrengthNight, num);
+							(ShaderPropertyID._GlowStrengthNight, num2);
 					}
 				} // Set Post cut glow
 				// Todo:  Set glow fade.  Current Fade is not working
@@ -44,11 +47,21 @@ namespace lflc
 							component.Stop();
 						}
 					}
-					//__instance.laserCutStreak.GetComponents<TrailRenderer>() need to figure out how this TrailRenderer sets color
-					// Want to change RGBA to have ~60-70% alpha
-					// Want to change Trail Time to 1 second instead of 15
+					
 				}
 
+				TrailRenderer component2 =
+					__instance.laserCutStreak.GetComponent<TrailRenderer>(); 
+				if (component2)
+				{
+					component2.startColor = new Color(.93f, .91f, .85f, .51f);
+					component2.time = 2;
+					component2.startWidth = .025f;
+					component2.widthMultiplier = .25f; //Change "weld point size"
+				}
+				// Want to change RGBA to have ~60-70% alpha.  Cannot change alpha here... need to investigate
+				// Want to change Trail Time to 2 second instead of 15
+					
 			}
 			return true;
 		}
