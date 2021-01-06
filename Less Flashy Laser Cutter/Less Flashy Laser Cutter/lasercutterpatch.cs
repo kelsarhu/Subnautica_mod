@@ -1,6 +1,7 @@
 ﻿using System;
 using Harmony;
 using UnityEngine;
+using System.Reflection;
 
 namespace lflc
 
@@ -8,7 +9,7 @@ namespace lflc
     [HarmonyPatch(typeof(LaserCutter))]
     [HarmonyPatch("StartLaserCuttingFX")]
 
-    class Laser_Light_Intensity_Fix_Patch
+    internal class Laser_Light_Initial_emmitter_patch
     {
         [HarmonyPrefix]
         public static bool Prefix(LaserCutter __instance)
